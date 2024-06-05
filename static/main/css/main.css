@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background: #c31717;
+    display: flex;
+
+
+}
+aside{
+    float: left;
+    background: #d6d6c8;
+    width: 20%;
+    padding: 3%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-right: 5px solid  #7e539d ;
+}
+
+aside .logo{
+
+    font-size: 200%;
+
+    font-weight:  bold;
+    /*position: relative;*/
+    justify-content: center;
+}
+
+aside h3{
+    margin-top: 60px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+aside ul{
+    list-style: none;
+    margin: 0;
+}
+
+aside ul li{
+    list-style: none;
+    margin-top: 3vh;
+    font-size: 25px;
+    color: #fff;
+    transition: transform .8s ease ;
+}
+aside ul a{
+    color: #9d5953 ;
+}
+aside ul li:hover, aside ul a:hover{
+    color: crimson;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    float: right;
+    width: 80%;
+    justify-content: center;
+}
+
+main .features{
+    float: right;
+    color: white;
+    margin-top: 100px;
+    text-align: center ;
+    width: 75%;
+}
+
+main .h1_avto{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 0;
+}
+
+
+main .advertisement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 0px;
+}
+
+main .advertisement img{
+    width: 40%;
+    height: 40%;
+}
+main .advertisement .characteristic{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    font-size: 25px;
+}

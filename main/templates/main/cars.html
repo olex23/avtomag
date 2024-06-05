@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+CARS
+{% endblock title %}
+
+
+{% block content %}
+    <h1 class="h1_avto">
+        Всі оголошення
+    </h1>
+
+{% for car  in cars  %}
+<a href="{% url 'main:car' car.id %}" >
+    <div class="advertisement">
+
+        <div class="image-container">
+            <img class="element1" src="{{ car.image.url }}">
+        </div>
+        <div class="characteristic">
+            <ul >
+                <li>{{ car.model }}</li>
+                <li>Рік {{ car.year }}</li>
+                <li>Пробіг {{ car.odometer }}</li>
+            </ul>
+        </div>
+
+
+    </div>
+</a>
+
+    {% endfor %}
+{% endblock content %}

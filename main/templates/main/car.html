@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{car.model}}
+{% endblock title %}
+
+
+{% block content %}
+    <h1 class="h1_avto">
+        {{car.model}}
+    </h1>
+
+    <div class="advertisement">
+
+
+        <img src="{{ car.image.url }}">
+
+        <ul class="characteristic">
+            <li>
+                {{ car.model }}
+
+                    {% if user.is_authenticated == True and car.owner == request.user%}
+                        <a href="{% url 'main:edit_car' car.id %}">Редагувати</a>
+                        <a href="{% url 'main:delete_car' car.id %}">Видалити</a>
+                    {% endif %}
+
+
+            </li>
+            <li>{{ car.year }} року</li>
+            <li>Пробіг {{ car.odometer }} км</li>
+            <li> Ціна {{ car.price }} $</li>
+
+                {% if car.text %}
+                     {{ car.text }}
+                {% else %}
+                    Додаткова інф відсутня
+                {% endif %}
+
+
+        </ul>
+
+    </a>
+    </div>
+
+{% endblock content %}

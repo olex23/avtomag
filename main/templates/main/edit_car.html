@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Редагувати авто
+{% endblock title %}
+
+
+{% block content %}
+    <form action="{% url 'main:edit_car' car.id %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" >Додати авто</button>
+</form>
+
+{% endblock content %}

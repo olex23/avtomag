@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    /*flex-direction: row;*/
+    background: #b1e6df;
+}
+
+/* бічна панель aside */
+
+/* загальні налаштування бічної панелі*/
+header{
+    display: flex;
+    width: 15%;
+    flex-shrink: 0;
+    position: fixed;
+    background: #4fe3d9;
+    padding: 1%;
+    height: 100%;;
+    flex-direction: column;
+    color: black;
+    border-right: 5px solid  #7e539d ;
+    box-sizing: content-box;
+}
+/*головний логотип*/
+header .logo-img img{
+    width: 90%;
+
+}
+/* назва сайту*/
+header .logo-img .logo{
+    font-size: 2.7vw;
+    font-weight:  bold;
+    /*position: relative;*/
+    display: flex;
+    justify-content: center;
+}
+/*слово навігація*/
+header h3{
+    margin-top: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.3vw;
+}
+/*блок навігації*/
+header nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+/*посилання в навігації*/
+header nav ul a{
+    list-style: none;
+    margin: 0;
+    padding-left: 1vw;
+    margin-top: 5vh;
+    font-size: 1.8vw;
+    color: #fff;
+    transition: transform .8s ease ;
+    color: #9d5953 ;
+}
+/*посилання в навігації - дія*/
+header nav ul a:hover{
+    color: crimson;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main{
+    /*background: #c31717;*/
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 82.5%;
+    padding: 2%;
+    /*margin-left: 12%;*/
+    justify-content: center;
+
+}
+
+main .features{
+    float: right;
+    color: white;
+    margin-top: 100px;
+    text-align: center ;
+    width: 75%;
+}
+
+main .h1_avto{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+
+main .advertisement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 0px;
+    margin-top: 10px;
+}
+
+main .advertisement .image-container, main .advertisement .characteristic{
+    flex: 1;
+    height: 25vh;
+}
+main .advertisement img{
+
+    height: 22vh;
+}
+main .advertisement .characteristic{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    font-size: 25px;
+}
+

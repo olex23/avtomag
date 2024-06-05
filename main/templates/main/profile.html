@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{user.username}}
+{% endblock title %}
+
+
+{% block content %}
+
+
+<h1 class="h1_avto">
+        Ваші оголошення,<br>
+        Бажаємо вдалого продажу, {{ user.username }}
+
+    </h1>
+    {% for car  in cars  %}
+
+        {% if car.owner == request.user %}
+            <div class="advertisement">
+                <a href="{% url 'main:car' car.id  %}">
+
+
+                    <img src="{{ car.image.url }}">
+
+                    <ul class="characteristic">
+                        <li>
+                                {{ car.model }}
+                        </li>
+                        <li>Рік {{ car.year }}</li>
+                        <li>Пробіг {{ car.odometer }}</li>
+                    </ul>
+
+                </a>
+            </div>
+    {% else %}
+            <p>++++++++++++</p>
+
+    {% endfor %}
+
+{% endblock content %}
