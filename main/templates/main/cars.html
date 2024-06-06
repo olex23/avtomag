@@ -11,18 +11,24 @@ CARS
     </h1>
 
 {% for car  in cars  %}
-<a href="{% url 'main:car' car.id %}" >
-    <div class="advertisement">
+{#<a href="{% url 'main:car' car.id %}" >#}
+    <div class="avto-container">
+
 
         <div class="image-container">
+            <a href="{% url 'main:car' car.id %}" >
             <img class="element1" src="{{ car.image.url }}">
+            </a>
         </div>
+
         <div class="characteristic">
+            <a href="{% url 'main:car' car.id %}" >
             <ul >
                 <li>{{ car.model }}</li>
                 <li>Рік {{ car.year }}</li>
                 <li>Пробіг {{ car.odometer }}</li>
             </ul>
+            </a>
         </div>
 
 
