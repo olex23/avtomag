@@ -8,7 +8,6 @@ body{
     display: flex;
     /*flex-direction: row;*/
     background: #b1e6df;
-
 }
 
 /* бічна панель aside */
@@ -54,8 +53,7 @@ header nav ul{
 }
 
 /*посилання в навігації*/
-header nav ul a, form a{
-
+header nav ul a, header nav ul form{
     list-style: none;
     margin: 0;
     padding-left: 1vw;
@@ -64,26 +62,28 @@ header nav ul a, form a{
     color: #fff;
     transition: transform .8s ease ;
     color: #9d5953 ;
-
 }
+
+/*онулив падінг-лефт що викик двічі від попередньої дії*/
+header nav ul form{
+    padding-left: 0;
+}
+
 /*посилання в навігації - дія*/
 header nav ul a:hover{
     color: crimson;
     text-decoration: none;
     transform: scale(1.05);
 }
-
+/*загальний вигляд  блоку main*/
 main{
-    background: #c31717;
     position: absolute;
     right: 0;
     display: flex;
     flex-direction: column;
     width: 82.5%;
     padding: 2%;
-    /*margin-left: 12%;*/
     justify-content: center;
-
 }
 
 main .features{

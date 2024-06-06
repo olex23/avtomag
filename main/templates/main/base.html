@@ -30,7 +30,7 @@
                     <a href="{% url 'main:profile' %}"><i class="fa-solid fa-user"></i> Профіль</a>
 
                     <form id="frm_logout" method="post" action="{% url 'users:logout' %}">     {% csrf_token %}
-                        <a  href="javascript:$('#frm_logout').submit();" ><i class="fa-solid fa-sign-out"></i> Вийти</a>
+                        <a  href="javascript:$('#frm_logout').submit();" ><i class="fa-solid fa-sign-out"></i>Вийти</a>
                     </form>
                 {% else %}
 
