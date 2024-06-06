@@ -130,7 +130,7 @@ main .avto-container img{
     width: 35vw;
 }
 /*налаштування характеристок авто*/
-main .avto-container .characteristic ul li{
+main .avto-container .characteristic ul li, .characteristic {
     list-style: none;
     display: flex;
     flex-direction: column;

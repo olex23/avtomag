@@ -16,7 +16,7 @@
     {% for car  in cars  %}
 
         {% if car.owner == request.user %}
-            <div class="advertisement">
+            <div class="avto-container">
                 <a href="{% url 'main:car' car.id  %}">
 
 
@@ -32,8 +32,7 @@
 
                 </a>
             </div>
-    {% else %}
-            <p>++++++++++++</p>
+        {% endif %}
 
     {% endfor %}
 
